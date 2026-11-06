@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Khyon Chyon · Kashmiri cloud kitchen, Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEAF4;--surface:#E3DBEC;--ink:#2A1838;--soft:#5E4B6E;--accent:#B87608;--line:#CFC3DC;--on-accent:#fff;
+--serif:'Fraunces',Georgia,serif;--sans:'Mukta','Segoe UI',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1B1024;--surface:#281837;--ink:#EEE6F5;--soft:#B6A5C6;--accent:#E8B33A;--line:#3D2A50;--on-accent:#1B1024}}
+:root[data-theme="dark"]{--bg:#1B1024;--surface:#281837;--ink:#EEE6F5;--soft:#B6A5C6;--accent:#E8B33A;--line:#3D2A50;--on-accent:#1B1024}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;margin:0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:500}
+nav a{text-decoration:none;margin-left:20px}
+nav .brand{font-family:var(--serif);font-weight:700;font-size:1.2rem;margin:0}
+.hero{padding:56px 0 88px;position:relative}
+.hero h1{font-size:clamp(3.4rem,15vw,9rem);letter-spacing:-.03em}
+.hero h1 span{display:block;font-style:italic;font-weight:400;color:var(--accent);margin-left:.6em}
+.hero p.lead{font-size:clamp(1.2rem,3.4vw,1.7rem);font-family:var(--serif);max-width:24em;margin:28px 0 32px}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none}
+.btn.ghost{background:none;color:var(--ink);border:2px solid var(--ink);margin-left:10px}
+.steam{position:absolute;right:4%;top:70px;width:90px;height:150px;opacity:.55}
+.steam path{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-dasharray:140;animation:rise 5s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.2s}.steam path:nth-child(3){animation-delay:2.4s}
+@keyframes rise{0%{stroke-dashoffset:140;opacity:0}30%{opacity:1}100%{stroke-dashoffset:-140;opacity:0}}
+@media (prefers-reduced-motion:reduce){.steam path{animation:none;stroke-dashoffset:0}}
+.band{background:var(--surface);padding:22px 0;font-family:var(--serif);font-style:italic;font-size:1.25rem;text-align:center}
+section{padding:84px 0}
+h2{font-size:clamp(2rem,6vw,3.4rem);margin-bottom:28px}
+.story{display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:820px){.story{grid-template-columns:1fr 1.3fr}}
+.story p{margin:0 0 1.1em;max-width:34em}
+.pull{font-family:var(--serif);font-size:1.7rem;line-height:1.3;border-left:4px solid var(--accent);padding-left:20px;font-style:italic}
+.menu{background:var(--surface)}
+.menu .intro{max-width:34em;color:var(--soft);margin-bottom:36px}
+.dishes{list-style:none;margin:0;padding:0;display:grid;gap:0 48px;grid-template-columns:1fr}
+@media(min-width:820px){.dishes{grid-template-columns:1fr 1fr}}
+.dishes li{padding:22px 0;border-top:1px solid var(--line)}
+.dishes h3{font-size:1.45rem;display:flex;align-items:center;gap:10px}
+.dishes p{margin:6px 0 0;color:var(--soft);font-size:1rem;line-height:1.55}
+.dot{width:12px;height:12px;border:2px solid;display:inline-block;flex:none;position:relative}
+.dot::after{content:"";position:absolute;inset:2px;border-radius:50%;background:currentColor}
+.nv{color:#B3261E}.v{color:#2E7D32}
+.legend{font-size:.9rem;color:var(--soft);margin-top:26px}
+.sub{font-family:var(--serif);font-size:1.5rem;margin:48px 0 4px}
+.how{display:grid;gap:34px;grid-template-columns:1fr}
+@media(min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.how h3{font-size:1.4rem;margin-bottom:8px}
+.how p{margin:0;color:var(--soft)}
+.letter{background:var(--ink);color:var(--bg);text-align:center;padding:96px 0}
+.letter p{font-family:var(--serif);font-size:clamp(1.4rem,4.4vw,2.3rem);line-height:1.35;max-width:22em;margin:0 auto 14px;font-style:italic}
+.letter small{font-size:1rem;opacity:.75}
+.order{text-align:center}
+.order p{max-width:30em;margin:0 auto 28px;color:var(--soft)}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:.95rem;color:var(--soft);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><p class="brand">Khyon Chyon</p><div><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#order">Order</a></div></nav>
+<header class="hero">
+<svg class="steam" viewBox="0 0 90 150" aria-hidden="true"><path d="M20 140c-18-30 18-40 0-70s18-40 0-65"/><path d="M45 140c-18-30 18-40 0-70s18-40 0-65"/><path d="M70 140c-18-30 18-40 0-70s18-40 0-65"/></svg>
+<h1>Khyon<span>Chyon</span></h1>
+<p class="lead">Kashmiri food, cooked the way it’s cooked at home. Delivered across Bengaluru.</p>
+<a class="btn" href="#menu">See the menu</a><a class="btn ghost" href="#order">Order tonight</a>
+</header>
+</div>
+<div class="band">Home is a long way off. Dinner doesn’t have to be.</div>
+
+<section id="story"><div class="wrap story">
+<div><h2>Why we cook</h2><p class="pull">“Khyon chyon” is what we say in Kashmiri for eating and drinking. At home, it also means sitting down together.</p></div>
+<div>
+<p>Khyon Chyon began with a quiet kind of hunger. Not the hunger of an empty stomach, but the one you feel in a new city, in a rented room, when the smell of a distant kitchen comes back to you out of nowhere.</p>
+<p>So many of us left the valley for work, for studies, for a better life. Bengaluru gave us a lot. It never gave us the Sunday rogan josh that took all afternoon, or the yakhni our mothers stirred without ever measuring anything.</p>
+<p>We started this kitchen for people far from home. We cook with the same slow patience and the same spices, and we use the recipes that were handed down to us rather than written down. Every box we pack is meant to feel like a message from home that says: <em>eat, you must be tired.</em></p>
+<p>If you’re a Kashmiri in Bengaluru, we hope this tastes like your roots. If you’ve never been to Kashmir, we hope it tastes like being welcomed.</p>
+</div></div></section>
+
+<section id="menu" class="menu"><div class="wrap">
+<h2>From our kitchen</h2>
+<p class="intro">Small batches, slow fires and no shortcuts. Cooked fresh and packed hot. Ask us for spice level or portion size.</p>
+<ul class="dishes">
+<li><h3><span class="dot nv" role="img" aria-label="Non-veg"></span>Rogan Josh</h3><p>Tender mutton in a deep red gravy of Kashmiri chilli, fennel and dry ginger. Unhurried, as it should be.</p></li>
+<li><h3><span class="dot nv" role="img" aria-label="Non-veg"></span>Yakhni Maaz</h3><p>Mutton simmered in a gentle curd and fennel broth. Pale, fragrant and the very definition of comfort.</p></li>
+<li><h3><span class="dot nv" role="img" aria-label="Non-veg"></span>Gandh Kokur</h3><p>Chicken slow-cooked with onions the Kashmiri way, mellow, sweet and homely.</p></li>
+<li><h3><span class="dot nv" role="img" aria-label="Non-veg"></span>Kokar Kofte with Tamatar</h3><p>Soft chicken koftas in a bright, tangy tomato gravy. Meant to be mopped up with rice.</p></li>
+<li><h3><span class="dot v" role="img" aria-label="Veg"></span>Tamatr Chaman</h3><p>Golden paneer cubes in a silky tomato gravy, finished with a touch of fennel and saffron-coloured ghee.</p></li>
+<li><h3><span class="dot v" role="img" aria-label="Veg"></span>Wazza-style Mushrooms</h3><p>Mushrooms cooked in the spirit of the waza’s wazwan kitchen: rich, aromatic and generously spiced.</p></li>
+</ul>
+<p class="sub">Little things we added</p>
+<ul class="dishes">
+<li><h3><span class="dot v" role="img" aria-label="Veg"></span>Kashmiri Pulao</h3><p>Fragrant rice with saffron, dry fruits and whole spices, the perfect partner for every gravy.</p></li>
+<li><h3><span class="dot v" role="img" aria-label="Veg"></span>Haak &amp; Rice</h3><p>Simple collard greens, the everyday taste of a Kashmiri home.</p></li>
+<li><h3><span class="dot v" role="img" aria-label="Veg"></span>Noon Chai</h3><p>Pink salted tea with a creamy finish. Best on a rainy Bengaluru evening.</p></li>
+<li><h3><span class="dot v" role="img" aria-label="Veg"></span>Kehwa</h3><p>Saffron, cardamom and almond green tea, warm in a cup.</p></li>
+</ul>
+<p class="legend">Green: vegetarian &nbsp;·&nbsp; Red: non-vegetarian. Menu changes with the season, so ask what’s on today.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>How we cook</h2>
+<div class="how">
+<div><h3>Slowly</h3><p>Gravies are given the hours they ask for. No rushing and no powders to fake the colour.</p></div>
+<div><h3>Like home</h3><p>Fennel, dry ginger, Kashmiri chilli and ghee. Familiar flavours, not fusion.</p></div>
+<div><h3>With care</h3><p>Fresh meat, small batches and spotless packing, so it reaches you hot and tastes as it should.</p></div>
+</div></div></section>
+
+<div class="letter"><div class="wrap">
+<p>To everyone eating dinner alone in a city that isn’t home yet: we’re cooking for you.</p>
+<small>Khyon Chyon, from our kitchen to your table</small>
+</div></div>
+
+<section id="order" class="order"><div class="wrap">
+<h2>Hungry for home?</h2>
+<p>Message us on WhatsApp to place an order. We deliver across Bengaluru, and we love a good pre-order for weekend feasts and gatherings.</p>
+<a class="btn" href="https://wa.me/919541215185">Order on WhatsApp</a>
+</div></section>
+
+<footer><div class="wrap">Khyon Chyon · Kashmiri cloud kitchen · Bengaluru<br>Cooked with love and a little homesickness.</div></footer>
+</body>
+</html>
